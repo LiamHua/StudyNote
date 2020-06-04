@@ -211,3 +211,11 @@ find . -path ./download -prune -o -name test.file
 # -ctime      变化时间，如权限修改不会导致修改时间变化，但会导致变化时间变动
 ```
 
+
+
+
+
+# 二、随缘命令
+
+1. `echo $0` 查看当前shell
+2. 
