@@ -120,7 +120,7 @@
 
 ![图片来源：https://juejin.im/post/5df5fde36fb9a0162c486c71](https://pictures.huazai.fun/uPic/image-20200719114447519.png)
 
-​		在Java8 中HotSpot虚拟机取消了永久代，取而代之的是元空间（MetaSpace），那么永久代与元空间有什么区别呢？永久代是堆的一部分，和新生代、老年代地址连续，但是元空间用的是本地内存，不受堆的限制。第二点就是元空间只存储类的元信息，而常量、静态变量并入到了堆中。
+​		在Java8 中HotSpot虚拟机取消了永久代，取而代之的是元空间（MetaSpace），那么永久代与元空间有什么区别呢？永久代是堆的一部分，和新生代、老年代地址连续，但是元空间用的是本地内存，不受堆的限制。还有从Java7 开始字符串常量池、静态变量就从方法区移动到了堆中。
 
 ![图片来源：https://juejin.im/post/5df5fde36fb9a0162c486c71](https://pictures.huazai.fun/uPic/image-20200719114744212.png)
 
