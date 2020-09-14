@@ -1,5 +1,3 @@
-==参考书籍及部分图片来源：《深入理解Java虚拟机：第三版》==
-
 ## 一、JVM内存结构概述
 
 ![image-20200717172801422](https://pictures.huazai.fun/uPic/image-20200717172801422.png)
@@ -124,3 +122,8 @@
 
 ![图片来源：https://juejin.im/post/5df5fde36fb9a0162c486c71](https://pictures.huazai.fun/uPic/image-20200719114744212.png)
 
+
+
+
+
+==参考书籍及部分图片来源：《深入理解Java虚拟机》==
