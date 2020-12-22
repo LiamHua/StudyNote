@@ -20,3 +20,24 @@ sudo docker run -p 6379:6379 --name redis \
 -d redis redis-server /etc/redis/redis.conf
 ```
 
+
+
+### 3. nacos
+
+```shell
+sudo docker run -d \
+-e MODE=standalone \
+-e SPRING_DATASOURCE_PLATFORM=mysql \
+-e MYSQL_SERVICE_HOST=127.0.0.1 \
+-e MYSQL_SERVICE_PORT=3306 \
+-e MYSQL_SERVICE_USER=liam \
+-e MYSQL_SERVICE_PASSWORD=321$098 \
+-e MYSQL_SERVICE_DB_NAME=pgnc_nacos_config \
+-p 8848:8848 \
+--restart=always \
+--name mynacos \
+nacos/nacos-server
+
+
+```
+

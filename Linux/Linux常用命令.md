@@ -316,6 +316,163 @@ $ jobs -l | cut -d ' ' -f 2 --complement
 
 
 
+### 7. Sed
+
+​		sed 是强大的文本处理命令，主要功能如下
+
++ a：新增，在当前行的下一行添加文本
++ i：插入，在当前行的上一行添加文本
++ d：删除
++ c：取代
++ p：打印
++ s：取代
+
+> 以上指令都是直接输出修改后的文本，并不会修改源文件。若要修改源文件，需加上 -i 参数
+
+1. ##### 在第一行的后面添加新的一行 ‘hello,world!’
+
+```shell
+[liam@localhost ~]$ cat t.sh
+#!/bin/sh
+name="$(basename $1 .sql)"
+echo name
+sed -i 's/'$name' (/APCOREDB.'$name' (/' '$name'.sql
+[liam@localhost ~]$ sed 1a\hello,world! t.sh
+#!/bin/sh
+hello,world!
+name="$(basename $1 .sql)"
+echo name
+sed -i 's/'$name' (/APCOREDB.'$name' (/' '$name'.sql
+```
+
+> a 前面数字为几就是在第几行后面添加新的一行，若不带数字则代表在每一行后面添加新的一行
+
+> 添加多行可使用 \n 分隔
+
+##### 2. 在最后一行后面再添加新的一行 ‘hello,world!’
+
+```shell
+[liam@localhost ~]$ cat t.sh
+#!/bin/sh
+name="$(basename $1 .sql)"
+echo name
+sed -i 's/'$name' (/APCOREDB.'$name' (/' '$name'.sql
+[liam@localhost ~]$ sed '$a\hello,world!' t.sh
+#!/bin/sh
+name="$(basename $1 .sql)"
+echo name
+sed -i 's/'$name' (/APCOREDB.'$name' (/' '$name'.sql
+hello,world!
+```
+
+> $ 符号是特殊意义字符，在这里表示最后一行的意思，注意此时指令需要用引号包裹
+>
+> 该指令加上 -i 参数就相当于 echo hello, world! >> t.sh
+
+
+
+##### 3. 在第一行的前面添加新的一行 ‘hello,world!’
+
+```shell
+[liam@localhost ~]$ cat t.sh
+#!/bin/sh
+name="$(basename $1 .sql)"
+echo name
+sed -i 's/'$name' (/APCOREDB.'$name' (/' '$name'.sql
+[liam@localhost ~]$ sed 1i\hello,world! t.sh
+hello,world!
+#!/bin/sh
+name="$(basename $1 .sql)"
+echo name
+sed -i 's/'$name' (/APCOREDB.'$name' (/' '$name'.sql
+```
+
+> i前面数字为几就是在第几行前面添加新的一行，若不带数字则代表在每一行前面添加新的一行
+
+
+
+##### 4. 删除 1-2 行
+
+```shell
+[liam@localhost ~]$ cat t.sh
+#!/bin/sh
+name="$(basename $1 .sql)"
+echo name
+sed -i 's/'$name' (/APCOREDB.'$name' (/' '$name'.sql
+[liam@localhost ~]$ sed 1,2d t.sh
+echo name
+sed -i 's/'$name' (/APCOREDB.'$name' (/' '$name'.sql
+```
+
+
+
+##### 5. 删除 2到最后一行
+
+```shell
+[liam@localhost ~]$ cat t.sh
+#!/bin/sh
+name="$(basename $1 .sql)"
+echo name
+sed -i 's/'$name' (/APCOREDB.'$name' (/' '$name'.sql
+[liam@localhost ~]$ sed '2,$d' t.sh
+#!/bin/sh
+```
+
+
+
+
+
+
+
+### 8. netstat
+
+​		[Netstat](https://link.jianshu.com?t=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FNetstat)（network statistics）是在内核中访问**网络连接状态**及其相关信息的命令行程序，可以显示**路由表**、实际的网络连接和**网络接口**设备的状态信息，以及与 IP、TCP、UDP 和 ICMP 协议相关的统计数据，一般用于检验本机各端口的网络服务运行状况。
+
+```shell
+-a  显示所有连接 
+-t  显示tcp连接 
+-u  显示udp连接
+-l  显示监听中的连接（LISTEN）
+-p  显示进程信息（最好在root权限下使用）
+-e  显示进程所属用户
+-r  显示路由信息
+-i  显示网络接口设备的统计信息（结合 -e 就等于 ifconfig）
+-s  显示不同网络协议的统计信息
+-n  禁用反向解析
+```
+
+
+
+### 9. ps
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## 二、随缘命令
@@ -332,3 +489,29 @@ $ jobs -l | cut -d ' ' -f 2 --complement
 ### 2. nc
 
 ### 3. nmap
+
+
+
+
+
+```shell
+LISTENER =
+  (ADDRESS_LIST=
+       (ADDRESS=(PROTOCOL=tcp)(HOST=localhost)(PORT=1521))
+       (ADDRESS=(PROTOCOL=ipc)(KEY=PNPKEY)))
+
+
+ SID_LIST_LISTENER=
+   (SID_LIST=
+       (SID_DESC=
+          (GLOBAL_DBNAME=YX)
+          (SID_NAME=YX)
+          (ORACLE_HOME=/home/oracle/app/oracle/product/11.2.0)
+         (PRESPAWN_MAX=20)
+         (PRESPAWN_LIST=
+           (PRESPAWN_DESC=(PROTOCOL=tcp)(POOL_SIZE=2)(TIMEOUT=1))
+         )
+        )
+       )
+```
+
