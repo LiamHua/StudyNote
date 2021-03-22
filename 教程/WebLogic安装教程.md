@@ -55,39 +55,39 @@ mkdir weblogic
 
 + 点击 next
 
-![image-20201128184214575](https://pictures.huazai.fun/uPic/image-20201128184214575.png)
+![image-20201128184214575](https://pictures.huazai.vip/uPic/image-20201128184214575.png)
 
 + 将目录修改为刚刚创建的 weblogic 目录
 
-![image-20201128184349482](https://pictures.huazai.fun/uPic/image-20201128184349482.png)
+![image-20201128184349482](https://pictures.huazai.vip/uPic/image-20201128184349482.png)
 
 + 取消勾选
 
-![image-20201128184818954](https://pictures.huazai.fun/uPic/image-20201128184818954.png)
+![image-20201128184818954](https://pictures.huazai.vip/uPic/image-20201128184818954.png)
 
 + 典型安装
 
-![image-20201128184913163](https://pictures.huazai.fun/uPic/image-20201128184913163.png)
+![image-20201128184913163](https://pictures.huazai.vip/uPic/image-20201128184913163.png)
 
 + 确定 jdk 版本，点击 next
 
-  ![image-20201128185005081](https://pictures.huazai.fun/uPic/image-20201128185005081.png)
+  ![image-20201128185005081](https://pictures.huazai.vip/uPic/image-20201128185005081.png)
 
 + 确定安装目录，点击 next
 
-  ![image-20201128185044275](https://pictures.huazai.fun/uPic/image-20201128185044275.png)
+  ![image-20201128185044275](https://pictures.huazai.vip/uPic/image-20201128185044275.png)
 
 + 确定所要安装的组件，点击 next
 
-![image-20201128185202718](https://pictures.huazai.fun/uPic/image-20201128185202718.png)
+![image-20201128185202718](https://pictures.huazai.vip/uPic/image-20201128185202718.png)
 
 + 正在安装
 
-  ![image-20201128185244314](https://pictures.huazai.fun/uPic/image-20201128185244314.png)
+  ![image-20201128185244314](https://pictures.huazai.vip/uPic/image-20201128185244314.png)
 
 + 安装完成，点击 done 结束安装
 
-  ![image-20201128185606430](https://pictures.huazai.fun/uPic/image-20201128185606430.png)
+  ![image-20201128185606430](https://pictures.huazai.vip/uPic/image-20201128185606430.png)
 
 
 

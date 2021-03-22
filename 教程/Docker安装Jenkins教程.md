@@ -37,19 +37,19 @@ sudo docker exec -it 容器id bash
 cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 
-![image-20200714104059734](https://pictures.huazai.fun/uPic/image-20200714104059734.png)
+![image-20200714104059734](https://pictures.huazai.vip/uPic/image-20200714104059734.png)
 
 
 
 4. 将查询的密码输入，进入下一步，点击 选择插件来安装，等待几秒后进入下一步
 
-![image-20200714104303003](https://pictures.huazai.fun/uPic/image-20200714104303003.png)
+![image-20200714104303003](https://pictures.huazai.vip/uPic/image-20200714104303003.png)
 
 
 
 5. 点击 “无” 取消所有选择的项目，翻到最底下，选中中文插件，点击 安装
 
-![image-20200714104518491](https://pictures.huazai.fun/uPic/image-20200714104518491.png)
+![image-20200714104518491](https://pictures.huazai.vip/uPic/image-20200714104518491.png)
 
 
 
@@ -58,11 +58,11 @@ cat /var/jenkins_home/secrets/initialAdminPassword
 
 8. 修改镜像源，点击 系统管理 --> 插件管理 --> 高级，点击左下角 Jenkins 中文社区，复制地址，点击使用，再点击设置地址，进入原页面将升级站点中URL修改为刚刚复制的地址
 
-![image-20200714105407997](https://pictures.huazai.fun/uPic/image-20200714105407997.png)
+![image-20200714105407997](https://pictures.huazai.vip/uPic/image-20200714105407997.png)
 
-![image-20200714110017414](https://pictures.huazai.fun/uPic/image-20200714110017414.png)
+![image-20200714110017414](https://pictures.huazai.vip/uPic/image-20200714110017414.png)
 
-![image-20200714110213223](https://pictures.huazai.fun/uPic/image-20200714110213223.png)
+![image-20200714110213223](https://pictures.huazai.vip/uPic/image-20200714110213223.png)
 
 
 
@@ -71,9 +71,9 @@ cat /var/jenkins_home/secrets/initialAdminPassword
    + 点击获取后出现一大堆红色错误说明没有安装证书
    + 点击获取后出现一行错误，从提示中可以看出来是文件未找到，进入该仓库中发现没有对应版本的仓库，这个问题一般会出现在安装latest最新版时，可以将URL地址改为该仓库中的通用仓库地址，https://cdn.jsdelivr.net/gh/jenkins-zh/update-center-mirror@master/tsinghua/update-center.json
 
-   ![image-20200714110625305](https://pictures.huazai.fun/uPic/image-20200714110625305.png)
+   ![image-20200714110625305](https://pictures.huazai.vip/uPic/image-20200714110625305.png)
 
-![image-20200714110948846](https://pictures.huazai.fun/uPic/image-20200714110948846.png)
+![image-20200714110948846](https://pictures.huazai.vip/uPic/image-20200714110948846.png)
 
 
 

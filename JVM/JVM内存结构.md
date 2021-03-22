@@ -1,6 +1,6 @@
 ## 一、JVM内存结构概述
 
-![image-20200717172801422](https://pictures.huazai.fun/uPic/image-20200717172801422.png)
+![image-20200717172801422](https://pictures.huazai.vip/uPic/image-20200717172801422.png)
 
 
 
@@ -56,7 +56,7 @@
 
 ​		栈由栈帧组成，存储了局部变量表、操作数栈、动态连接、和方法返回地址等信息，每一个方法从调用开始到结束的过程都对应着一个栈帧从入栈到出栈的过程。
 
-![image-20200718192115326](https://pictures.huazai.fun/uPic/image-20200718192115326.png)
+![image-20200718192115326](https://pictures.huazai.vip/uPic/image-20200718192115326.png)
 
 
 
@@ -70,11 +70,11 @@
 
 ​		为了节省空间，变量槽是可以重用的，即在方法区内部也有部分变量的作用域不会覆盖整个方法，如 for(int i = 0; ;)等，当循环结束后变量i所在的变量槽就有可能被重用。
 
-![image-20200718200534979](https://pictures.huazai.fun/uPic/image-20200718200534979.png)
+![image-20200718200534979](https://pictures.huazai.vip/uPic/image-20200718200534979.png)
 
 ​		如图我们可以看到bytes变量作用域极小，当我们触发gc垃圾回收的时候bytes变量（引用）应该已失效，其对应的byte实例应该会被回收，但是事实并没有回收，为社么呢？看下图：
 
-![image-20200718201115072](https://pictures.huazai.fun/uPic/image-20200718201115072.png)
+![image-20200718201115072](https://pictures.huazai.vip/uPic/image-20200718201115072.png)
 
 ​		我们可以看到这次唯一的变化就是再次声明了一个变量i，但是结果就是byte实例被回收了，为什么？因为在图一中，bytes变量虽然看似已经失效，但是该变量槽依旧存在，而在图二中，我们再次声明了一个变量i，变量i重用了已失效的bytes变量所在的变量槽，导致bytes变量彻底失效，所以byte实例就被回收了。
 
@@ -90,7 +90,7 @@
 
 ​		从JVM内存结构上来看栈帧是相互独立的，但实际上相邻的栈帧（有调用关系）之间是有共享区域的，这样在方法调用时就可以直接通过操作栈来进行数值传递了。如图：
 
-![image-20200718214613170](https://pictures.huazai.fun/uPic/image-20200718214613170.png)
+![image-20200718214613170](https://pictures.huazai.vip/uPic/image-20200718214613170.png)
 
 
 
@@ -116,11 +116,11 @@
 
 ​		对于HotSpot虚拟机来说，很多人喜欢把方法区称作永久代，因为当时的HotSpot虚拟机设计团队选择把收集器的分代设计扩展至方法区，或者说使用永久代来实现方法区，也就是说当时的方法区和堆是连在一起的（物理上连在一起），这样使得HotSpot的垃圾收集器能够像管理Java堆一样管理这部分内存，省去专门为方法区编写内存管理代码的工作，但是其它虚拟机是没有永久代这个概念的。
 
-![图片来源：https://juejin.im/post/5df5fde36fb9a0162c486c71](https://pictures.huazai.fun/uPic/image-20200719114447519.png)
+![图片来源：https://juejin.im/post/5df5fde36fb9a0162c486c71](https://pictures.huazai.vip/uPic/image-20200719114447519.png)
 
 ​		在Java8 中HotSpot虚拟机取消了永久代，取而代之的是元空间（MetaSpace），那么永久代与元空间有什么区别呢？永久代是堆的一部分，和新生代、老年代地址连续，但是元空间用的是本地内存，不受堆的限制。还有从Java7 开始字符串常量池、静态变量就从方法区移动到了堆中。
 
-![图片来源：https://juejin.im/post/5df5fde36fb9a0162c486c71](https://pictures.huazai.fun/uPic/image-20200719114744212.png)
+![图片来源：https://juejin.im/post/5df5fde36fb9a0162c486c71](https://pictures.huazai.vip/uPic/image-20200719114744212.png)
 
 
 

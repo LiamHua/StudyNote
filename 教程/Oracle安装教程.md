@@ -213,7 +213,7 @@ export DISPLAY=192.168.12.134:0.0     # ：0.0 前的ip地址为客户端ip
 
 + 启动 Xmanager，新建Xstart 连接，填写基本参数后执行命令选项选择第三个
 
-![image-20201203171416429](https://pictures.huazai.fun/uPic/image-20201203171416429.png)
+![image-20201203171416429](https://pictures.huazai.vip/uPic/image-20201203171416429.png)
 
 + 点击确定保存后双击来启动刚刚创建的Xstart连接
 + 执行database目录中的 runInstaller 来开始安装

@@ -68,7 +68,7 @@ mkdir -p data/store/index2
    [uxun@localhost bin]$ vim runbroker.sh
    ```
 
-   ![image-20201127170508174](https://pictures.huazai.fun/uPic/image-20201127170508174.png)
+   ![image-20201127170508174](https://pictures.huazai.vip/uPic/image-20201127170508174.png)
 
    
 
@@ -78,7 +78,7 @@ mkdir -p data/store/index2
    [uxun@localhost bin]$ vim runserver.sh
    ```
 
-   ![image-20201127174405543](https://pictures.huazai.fun/uPic/image-20201127174405543.png)
+   ![image-20201127174405543](https://pictures.huazai.vip/uPic/image-20201127174405543.png)
 
    
 
@@ -88,7 +88,7 @@ mkdir -p data/store/index2
    [uxun@localhost bin]$ vim tools.sh
    ```
 
-   ![image-20201127175312652](https://pictures.huazai.fun/uPic/image-20201127175312652.png)
+   ![image-20201127175312652](https://pictures.huazai.vip/uPic/image-20201127175312652.png)
 
 
 

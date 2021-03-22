@@ -4,7 +4,7 @@
 
 ​		String 定义了之后值是不可变的，通过查看String类源码可以发现：1. String类是被final修饰的； 2. 成员字段value也是用final修饰的。我们知道，fianl修饰类代表类不可以被继承，可以防止破坏，而fianl修饰变量代表变量不可以被改变，当然这里fianl修饰的是数组，数组存放在堆中，所以这里是value的引用地址不可变，堆中的value是可以改变的。
 
-![image-20200719153006010](https://pictures.huazai.fun/uPic/image-20200719153006010.png)
+![image-20200719153006010](https://pictures.huazai.vip/uPic/image-20200719153006010.png)
 
 ​		但是因为字符串常量池的存在，无论我们怎么改变字符串的值，最终改变的都只是引用，并不会真正的改变常量池中的值。无论是new String 还是 直接赋值 String，最终的字符串都是存在于字符串常量池中，不过 new String的方式会在堆中创建一个String对象，该对象指向常量池中的的字符串。
 
@@ -12,15 +12,15 @@
 
 ​		下面我们来操作一波：
 
-![image-20200719163437291](https://pictures.huazai.fun/uPic/image-20200719163437291.png)
+![image-20200719163437291](https://pictures.huazai.vip/uPic/image-20200719163437291.png)
 
 ​		我们可以看到 s1 == s2， 因为它们都指向了字符串常量池中的同一个hello。而 s3 != S4，因为它们在堆中创建了两个String对象，这两个对象是不等同的，但是这两个对象都指向了常量池中的同一个hello。而 s1 != s3，是因为s1直接指向常量池中的hello，而s3指向堆中的String对象，两者自然就不同了。
 
-![image-20200719165422852](https://pictures.huazai.fun/uPic/image-20200719165422852.png)
+![image-20200719165422852](https://pictures.huazai.vip/uPic/image-20200719165422852.png)
 
 ​		当然我们可以使用String类的intern() 方法直接来获取字符串常量池的指向，intern方法是一个native方法。如图，此时 s2.intern() 直接指向了常量池中的hello，所以 s1 就等于 s2 了。
 
-![image-20200719165940768](https://pictures.huazai.fun/uPic/image-20200719165940768.png)
+![image-20200719165940768](https://pictures.huazai.vip/uPic/image-20200719165940768.png)
 
 
 
@@ -32,13 +32,13 @@
 
 ​		我们知道String类型在改变值的时候并不会改变原有的值，而是会创建一个新值并指向它，那么此时就出现了一个问题，当大量使用String的时候就会浪费空间。于是StringBuilder就出现了，对比String，StringBuilder是在原有的值上进行改动而不是创建新的值。
 
-![image-20200719172701648](https://pictures.huazai.fun/uPic/image-20200719172701648.png)
+![image-20200719172701648](https://pictures.huazai.vip/uPic/image-20200719172701648.png)
 
-![image-20200719172811109](https://pictures.huazai.fun/uPic/image-20200719172811109.png)
+![image-20200719172811109](https://pictures.huazai.vip/uPic/image-20200719172811109.png)
 
 ​		如图是一个循环和它的字节码指令，我们可以看到str在连续改变的时候被JVM自动优化成了StringBuilder以避免字符串常量池产生大量无用的值，但是这段代码会产生大量的StringBuilder对象，经测试在默认情况下堆会溢出，所以我们需要直接使用StringBuilder类，这样就可以只产生一个StringBuilder类。
 
-![image-20200719174339506](https://pictures.huazai.fun/uPic/image-20200719174339506.png)
+![image-20200719174339506](https://pictures.huazai.vip/uPic/image-20200719174339506.png)
 
 
 
@@ -46,7 +46,7 @@
 
 ​		StringBuilder是线程不安全的，而StringBuffer是线程安全的，这就是它们的区别。
 
-![image-20200719174900856](https://pictures.huazai.fun/uPic/image-20200719174900856.png)
+![image-20200719174900856](https://pictures.huazai.vip/uPic/image-20200719174900856.png)
 
 
 

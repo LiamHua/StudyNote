@@ -12,5 +12,5 @@
 
 ### 2. 流程
 
-![git](https://pictures.huazai.fun/uPic/git.png)
+![git](https://pictures.huazai.vip/uPic/git.png)
 

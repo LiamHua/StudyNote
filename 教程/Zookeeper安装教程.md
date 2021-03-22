@@ -50,13 +50,13 @@ cp zoo_sample.cfg zoo.cfg
 
 6. ##### 在 zookeeper 目录下新建 data 目录，这将会是 zookeeper 的数据存放目录
 
-![image-20201127151558295](https://pictures.huazai.fun/uPic/image-20201127151558295.png)
+![image-20201127151558295](https://pictures.huazai.vip/uPic/image-20201127151558295.png)
 
 
 
 7. ##### 修改配置文件，编辑刚才的 zoo.cfg 配置文件，将 dataDir 的值修改为 data 目录地址
 
-![image-20201127151919665](https://pictures.huazai.fun/uPic/image-20201127151919665.png)
+![image-20201127151919665](https://pictures.huazai.vip/uPic/image-20201127151919665.png)
 
 
 
